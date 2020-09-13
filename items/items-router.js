@@ -16,7 +16,7 @@ router.get("/:id", async (req, res, next) => {
     const item = await Items.findById(req.params.id);
     if (!item) {
       return res.status(404).json({
-        message: "Hobbit not found"
+        message: "Item not found"
       });
     }
 
